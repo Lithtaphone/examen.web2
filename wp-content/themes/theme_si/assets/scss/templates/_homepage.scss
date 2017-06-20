@@ -1,0 +1,49 @@
+header{
+  .row{
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.slider{
+  width: 100%;
+  height: 100vh;
+}
+
+.produits{
+  padding: 100px 122px;
+  text-align: center;
+
+  h2{
+    margin-bottom: 50px;
+  }
+  .cover{
+    position: relative;
+    width: 61%;
+    }
+
+    .amenagement,.meubles,.petits{
+      figcaption{
+        position: absolute;
+        top: 50%;
+      }
+    }
+    .amenagement{
+      figcaption{
+        left: 31%;
+      }
+    }
+
+    .meubles{
+      figcaption{
+        left: 45%;
+      }
+    }
+    .petits{
+      figcaption{
+        left: 40%;
+      }
+    }
+
+    .grid-item{width: 61%}
+}
