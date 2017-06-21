@@ -3,123 +3,150 @@
 Template Name: Homepage
 */
 get_header(); ?>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
+
+</script>
 
 <header>
-	<div class="menu">
-		<nav>
-			<ul>
-				<li><a href="#">Accueil</a></li>
-				<li><a href="#">Produits</a></li>
-				<li><a href="#">Contact</a></li>
+<div class="row">
+	<div class="menu small-4 large-1 columns">
+		<nav id="nav" class="overlay">
+
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+			<ul class="overlay-content">
+				<li><a href="#">Accueil</a>/li>
+				<li><a href="#">Produits</a>/li>
+				<li><a href="#">À propos</a>/li>
+				<li><a href="#">Contact</a>/li>
+				<div class="social">
+					<p>Suivez nous</p>
+					<p>FB</p>
+				</div>
 			</ul>
-		</nav>
-		<div class="social">
-			<p>Suivez nous</p>
-			<p>FB</p>
-		</div>
+			</nav>
+		<span onclick="openNav()">open</span>
 	</div>
-		<div class="row">
-			<a href="#" class="small-2 large-1 columns">RWD</a>
-			<h1 class="small-2 large-10 columns">Logo</h1>
-			<p class="small-2 large-1 columns">Q</p>
-		</div>
+
+		<h1 class="logo small-4 large-offset-4 large-1 columns"><img src="http://localhost:8888/examen.web2/wp-content/uploads/2017/06/logo_final_structures_interieures.png" alt="Structures Intérieures"></h1>
+		<p class="small-4 large-1 columns">Q</p>
+</div>
 </header>
 
 <main>
 
-	<section class="slider">
-		<div class="orbit" role="region" aria-label="Slider - Structures Intérieures" data-orbit>
-	  <ul class="orbit-container">
-	    <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-	    <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-	    <li class="is-active orbit-slide">
-				<img src="http://localhost:8888/examen.web2/rack-a-vinyles-800x580/" alt="Produit">
-				<figcaption>Rack à vinyls</figcaption>
-				<a href="#">Plus de détails</a>
-	    </li>
-	    <li class="orbit-slide">
-				<img src="http://localhost:8888/examen.web2/rack-a-vinyles-800x580/" alt="Produit">
-				<figcaption>Rack à vinyls</figcaption>
-				<a href="#">Plus de détails</a>
-	    </li>
-	    <li class="orbit-slide">
-				<img src="http://localhost:8888/examen.web2/rack-a-vinyles-800x580/" alt="Produit">
-				<figcaption>Rack à vinyls</figcaption>
-				<a href="#">Plus de détails</a>
-	    </li>
-	    <li class="orbit-slide">
-				<img src="http://localhost:8888/examen.web2/rack-a-vinyles-800x580/" alt="Produit">
-				<figcaption>Rack à vinyls</figcaption>
-				<a href="#">Plus de détails</a>
-	    </li>
-	  </ul>
-	  <nav class="orbit-bullets">
-	    <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
-	    <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-	    <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-	    <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-	  </nav>
-	</div>
-	</section>
+<section class="caroussel">
+		<ul class="slide">
+			<li>
+				<img src="http://localhost:8888/examen.web2/wp-content/uploads/2017/06/rack-a-vinyles-800x580.jpg" alt="Produit">
+				<div class="texte-slider">
+					<figcaption>Rack à vinyls</figcaption>
+					<a href="#" class="button">Plus de détails</a>
+				</div>
+			</li>
+			<li>
+				<img src="http://localhost:8888/examen.web2/wp-content/uploads/2017/06/rack-a-vinyles-800x580.jpg" alt="Produit">
+				<div class="texte-slider">
+					<figcaption>Rack à vinyls</figcaption>
+					<a href="#">Plus de détails</a>
+				</div>
+			</li>
+			<li>
+				<img src="http://localhost:8888/examen.web2/wp-content/uploads/2017/06/rack-a-vinyles-800x580.jpg" alt="Produit">
+				<div class="texte-slider">
+					<figcaption>Rack à vinyls</figcaption>
+					<a href="#">Plus de détails</a>
+				</div>
+			</li>
+			<li>
+				<img src="http://localhost:8888/examen.web2/wp-content/uploads/2017/06/rack-a-vinyles-800x580.jpg" alt="Produit">
+				<div class="texte-slider">
+					<figcaption>Rack à vinyls</figcaption>
+					<a href="#">Plus de détails</a>
+				</div>
+			</li>
+		</ul>
+</section>
 
 
 
-	<section class="produits">
-		<h2>Nos produits</h2>
-		<div class="grid">
-			<figure class="amenagement grid-item">
+<section class="produits">
+	<h2>Nos produits</h2>
+	<div class="row">
+		<div class="gauche large-6 column">
+			<figure class="amenagement">
 				<div class="cover">
 					<img src="http://localhost:8888/examen.web2/wp-content/uploads/2017/06/cover_amenagement.jpg" alt="Aménagement sur mesure - Structures Intérieures">
 					<figcaption>Aménagement sur mesure</figcaption>
 				</div>
 			</figure>
-			<figure class="meubles grid-item">
+		</div>
+		<div class="droit large-6 column">
+			<figure class="meubles">
 				<div class="cover">
 					<img src="http://localhost:8888/examen.web2/wp-content/uploads/2017/06/cover_meubles.jpg" alt="Meubles - Structures Intérieures">
 					<figcaption>Meubles</figcaption>
 				</div>
 			</figure>
-			<figure class="petits grid-item">
+			<figure class="petits">
 				<div class="cover">
 					<img class="petit"src="http://localhost:8888/examen.web2/wp-content/uploads/2017/06/cover_petitmob.jpg" alt="Petits mobiliers - Structures Intérieures">
 					<figcaption>Petits mobiliers</figcaption>
 				</div>
 			</figure>
 		</div>
-	</section>
+	</div>
+</section>
 
-	<section class="apropos">
-		<h2>Olivier Hess</h2>
-		<p>Olivier Hass, artisant menuisier, porte une attention particulière à proposer des projets sur mesures à ses clients, intégrant aux pièces les particularités du client (environnement, personnalité) et le deseign estampillé Structures Intérieures. Chaque réalisation est un rojet à part entière; Olivier Hass rencontre le client, échange sur ses objectif et usages, propose différentes simulations avant de livrer et d’installer les pièces définitives.</p>
-		<a href="#">Contactez-nous</a>
-	</section>
+<section class="apropos">
 
-	<section class="contact">
+	<div class="row">
+		<div class="texte-droite large-offset-6 columns">
+			<h2>Olivier Hess</h2>
+			<p>Olivier Hass, artisant menuisier, porte une attention particulière à proposer des projets sur mesures à ses clients, intégrant aux pièces les particularités du client (environnement, personnalité) et le deseign estampillé Structures Intérieures. Chaque réalisation est un rojet à part entière; Olivier Hass rencontre le client, échange sur ses objectif et usages, propose différentes simulations avant de livrer et d’installer les pièces définitives.</p>
+			<a href="#">Contactez-nous</a>
+		</div>
+	</div>
 
-	</section>
+
+</section>
+
+<section class="contact">
+
+</section>
 </main>
 
 <footer>
-	<div class="gauche">
-		<nav>
-			<ul>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Mentions légales</a></li>
-			</ul>
-		</nav>
-		<p>© 2017 Structures Intérieures</p>
-	</div>
-	<div class="droit">
-		<a href="#">FB</a>
-	</div>
+<div class="gauche">
+	<nav>
+		<ul>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Mentions légales</a></li>
+		</ul>
+	</nav>
+	<p>© 2017 Structures Intérieures</p>
+</div>
+<div class="droit">
+	<a href="#">FB</a>
+</div>
 
 </footer>
 <script>
-$('.grid').masonry({
-// options
-itemSelector: '.grid-item',
+function openNav() {
+	document.getElementById("nav").style.width = "100%";
+}
+
+function closeNav() {
+	document.getElementById("nav").style.width = "0%";
+}
+
+$(document).ready(function(){
+$('.slide').slick({
+
+});
 });
 </script>
 <script id="__bs_script__">//<![CDATA[
